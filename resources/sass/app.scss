@@ -1,0 +1,33 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+.bg-bluee {
+    background-color: #005c99;
+}
+
+.table-smooth {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-smooth th,
+.table-smooth td {
+    border-top: none; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.extra-bold {
+    font-weight: 900;
+}
+
+.nav-link.active,
+.navbar-brand.active {
+    color: #000; 
+    font-weight: bold;
+}
