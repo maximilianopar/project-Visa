@@ -35,7 +35,7 @@ class BookController extends Controller
         $books->titulo = $request->get('titulo');
         $books->autor = $request->get('autor');
         $books->save();
-        return redirect("/books"); 
+        return redirect("/books")->with('success', 'El formulario se envió correctamente.');
     }
 
     /**
