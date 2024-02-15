@@ -7,7 +7,7 @@
     </div>
 
     <div  class="w-75 mx-auto">
-        <form action="/project-g/public/contactos" method="POST">
+        <form action="/project-g/public/contacts" method="POST">
             @CSRF
 
             <div class="form-group mt-3">

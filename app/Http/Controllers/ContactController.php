@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contacto;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
-class ContactoController extends Controller
+class ContactController extends Controller
 {
     public function index()
     {
-      return view('contacto');
+      return view('contact');
     }
 
 
@@ -17,23 +17,19 @@ class ContactoController extends Controller
     {
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-
         $request->validate([
             'email' => 'required|email|min:8|max:150',
             'mensaje' => 'required|min:5|max:255',
             
         ]);
 
-        $contactos = new Contacto();
-        $contactos->email = $request->get('email');
-        $contactos->mensaje = $request->get('mensaje');
-        $contactos->save();
-        return redirect("/contactos");
+        $contacts = new Contact();
+        $contacts->email = $request->get('email');
+        $contacts->mensaje = $request->get('mensaje');
+        $contacts->save();
+        return redirect("/contacts");
     }
 
     /**

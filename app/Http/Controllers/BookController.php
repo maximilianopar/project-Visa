@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use Illuminate\Http\Request;
+use App\Http\Requests\BookFormRequest;
 
 class BookController extends Controller
 {
@@ -29,13 +30,16 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-       
+        $request->validate([
+            'titulo' => 'required|min:2|max:255',
+            'autor' => 'required|min:2|max:255',
+        ]);
 
         $books = new Book();
         $books->titulo = $request->get('titulo');
         $books->autor = $request->get('autor');
         $books->save();
-        return redirect("/books")->with('success', 'El formulario se envió correctamente.');
+        return redirect("/books");
     }
 
     /**

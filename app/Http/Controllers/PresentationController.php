@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 //use Illuminate\Http\Request;
 
 
-class Presentation extends Controller
+class PresentationController extends Controller
 {
     public function about()
     {

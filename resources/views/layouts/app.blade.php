@@ -45,7 +45,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('contactos') ? 'active' : '' }}" href="{{ url('/contactos') }}" style="width: 7%">
+                        <a class="nav-link {{ Request::is('contacts') ? 'active' : '' }}" href="{{ url('/contacts') }}" style="width: 7%">
                             Contacto
                         </a>
                     </li>
